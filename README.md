@@ -1,17 +1,16 @@
-# 🌿 Plant Disease Classification Using EfficientNetB0
+# Plant Disease Classification Using EfficientNetB0
 
 This project uses EfficientNetB0 transfer learning to classify plant leaf diseases from the PlantVillage dataset. The model is trained with image augmentation, proper preprocessing, and modern deep learning techniques to achieve high accuracy and strong generalization.
 
-## 🚀 Features
+## Features
 - Dataset loading & preprocessing
 - Image augmentation for robustness
 - Transfer learning with EfficientNetB0 (ImageNet weights)
 - Frozen base model + custom classification head
 - Training with Adam optimizer
 - Evaluation using accuracy, confusion matrix, and classification report
-- Grad-CAM for explainability
 
-## 🧠 Model Architecture
+## Model Architecture
 ### 🔹 EfficientNetB0 (pre-trained on ImageNet)
 ```
 base_model = tf.keras.applications.EfficientNetB0(
@@ -28,7 +27,7 @@ base_model = tf.keras.applications.EfficientNetB0(
 - Dropout (0.3)
 - Dense output layer with softmax activation
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Python
 - TensorFlow / Keras
 - NumPy, Pandas
@@ -36,7 +35,7 @@ base_model = tf.keras.applications.EfficientNetB0(
 - Scikit-learn
 - Google Colab
 
-## 📊 Training & Evaluation
+## Training & Evaluation
 - Optimizer: Adam (lr = 1e-3)
 - Loss: sparse categorical crossentropy
 - Metrics: accuracy
@@ -56,19 +55,17 @@ PlantDiseaseClassification/
 ├── README.md
 │
 ├── results/
-│   ├── accuracy_curve.png
-│   ├── loss_curve.png
-│   ├── confusion_matrix.png
-│   └── gradcam.png
+│   ├── accuracy-plot.png
+│   ├── loss-plot.png
+│   ├── confusion-matrix.png
+│   
 │
 ├── model/
 │   └── best_model.h5
-│
-└── samples/
-    └── sample_leaf.jpg
+
 ```
 
-## 🔮 Future Work
+## Future Work
 - Fine-tuning deeper EfficientNet layers
 - Trying EfficientNetB3/B4 or Vision Transformers
 - Ensemble models
@@ -76,13 +73,13 @@ PlantDiseaseClassification/
 - Adding real-world data
 - Using object detection for disease localization
 
-## 📌 How to Run
+## How to Run
 1. Open the notebook in Google Colab
 2. Upload dataset or connect Google Drive
 3. Run all cells
 4. View predictions and visualizations
 
-## 🙌 Acknowledgements
-- PlantVillage Dataset
+## Acknowledgements
+- PlantVillage Dataset (https://data.mendeley.com/datasets/tywbtsjrjv/1)
 - TensorFlow / Keras
 - Google Colab
